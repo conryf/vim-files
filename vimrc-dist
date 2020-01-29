@@ -15,7 +15,7 @@ hi Search ctermfg=red ctermbg=white
 nnoremap <NL> i<CR><ESC>
 autocmd BufWinLeave *.* mkview
 autocmd BufWinEnter *.* silent loadview 
-colo mango
+colo distinguished
 " Double-j acts like escape
 inoremap jk <Esc>
 set number
