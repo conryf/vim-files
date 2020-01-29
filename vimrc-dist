@@ -1,0 +1,23 @@
+set autoindent
+syntax on
+set number
+set ts=2
+set sw=2
+set incsearch
+set hlsearch
+execute pathogen#infect()
+nmap <C-n> :NERDTreeTabsToggle<CR>
+nmap <C-b> :NERDTreeFocusToggle<CR>
+let g:nerdtree_tabs_meaningful_tab_names=1
+let g:session_autosave = 'no'
+let g:session_autoload = 'no'
+hi Search ctermfg=red ctermbg=white
+nnoremap <NL> i<CR><ESC>
+autocmd BufWinLeave *.* mkview
+autocmd BufWinEnter *.* silent loadview 
+colo mango
+" Double-j acts like escape
+inoremap jk <Esc>
+set number
+" Fix files with prettier, and then ESLint.
+let b:ale_fixers = {'javascript': ['prettier', 'eslint']}
